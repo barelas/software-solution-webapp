@@ -1,0 +1,141 @@
+<!--
+Copyright (c) 2012 George Barelas.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the GNU Public License v3.0
+which accompanies this distribution, and is available at
+http://www.gnu.org/licenses/gpl.html
+-->
+<wicket:head xmlns:wicket="http://wicket.apache.org">
+	<wicket:link>
+	<script src="js/AnalysisPage.js"></script>
+	</wicket:link>
+</wicket:head>
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+<form class="analysis" wicket:id="form">
+<div>
+<div>
+<div id="step1">
+	<h4>Βήμα 1: Ταυτοποίηση και αναλυτικός καθορισμός του προβλήματος</h4>
+	
+	<p>Τίτλος του project:<br/>
+		<input type="text" wicket:id="title" />
+	</p>
+	
+	<p>Περιγραφή:<br/>
+		<textarea wicket:id="description"></textarea>
+	</p>
+	
+	<p>Λέξεις-κλειδιά:<br/>
+		<input type="text" wicket:id="keywords" />
+	</p>
+	
+	<p>Χρονικό διάστημα λειτουργίας (σε χρόνια):
+		<input style="width: 20px;" type="text" wicket:id="usageEstimation" />
+	</p>
+	
+	<p>Έμπειροι χρήστες: <input type="checkbox" wicket:id="keyusers" />
+	</p>
+	
+	<p>Ευαίσθητα δεδομένα: <input type="checkbox" wicket:id="sensitiveData" />
+	</p>
+	
+	<p>Τμήμα ΤΠΕ: <input type="checkbox" wicket:id="itDepartment" />
+	</p>
+</div>
+
+<div id="step2">
+	<h4>Βήμα 2: Καθορισμός του πεδίου λύσεων</h4>
+	<p>
+	Προτεινόμενες λύσεις:
+	</p>
+	<ol wicket:id="solutionsContainer">
+		<li wicket:id="solutions">
+			<span wicket:id="title"></span>
+			<a href="#" onclick="$(this).parent().find('div.solution_form').fadeIn();return false;">[Επεξεργασία]</a>
+			<a href="#" wicket:id="delete">[Διαγραφή]</a>
+			<form class="solution_form" wicket:id="solution_form">
+				<h4>Επεξεργασία υποψήφιας λύσης</h4>
+				<p>Τίτλος:<br/>
+					<input type="text" wicket:id="title" />
+				</p>
+				<p>Ανάπτυξη και εγκατάσταση από:<br/>
+					<select wicket:id="anapty3hBy"></select>
+				</p>
+				<p>Συντήρηση από:<br/>
+					<select wicket:id="synthrhshBy"></select>
+				</p>
+				<p>Βασικές Τεχνολογίες:<br/>
+					<textarea wicket:id="techDesc"></textarea>
+				</p>
+				<p>Φιλοξενία σε:<br/>
+					<select wicket:id="filo3eniaBy"></select>
+				</p>
+				<p>Διαχείριση εξυπηρετητών από:<br/>
+					<select wicket:id="diaxeirishBy"></select>
+				</p>
+				<p>
+					<a wicket:id="cancel">Ακύρωση</a>
+					<a class="boxit" style="margin-left:20px;" wicket:id="save_solution">Αποθήκευση λύσης</a></p>
+			</form>
+		</li>
+	</ol>
+	<p style="text-align:center;" class="extra_space"><a class="boxit" wicket:id="add_solution">Προσθήκη νέας υποψήφιας λύσης</a></p>
+</div>
+
+<div id="step3">
+	<h4>Βήμα 3: Σύγκριση και επιλογή λύσης</h4>
+	<p>
+	Υποψήφιες λύσεις:
+	</p>
+	<ol wicket:id="sygkrishContainer">
+		<li wicket:id="solutions">
+			<span wicket:id="title"></span>
+			<a href="#" onclick="$(this).parent().find('div.solution_form').fadeIn();return false;">[Επεξεργασία]</a>
+			<form class="solution_form" wicket:id="solution_form">
+				<h4>Εισαγωγή απαραίτητων πεδίων για τη σύγκριση</h4>
+				<p>Τίτλος Λύσης:
+					<span wicket:id="title"></span>
+				</p>
+				<p>Κόστος ανάπτυξης:<br/>
+					<input type="text" wicket:id="kostosAnapty3hsF" />
+				</p>
+				<p>Χρόνος ανάπτυξης (σε ημέρες):<br/>
+					<input type="text" wicket:id="xronosAnapty3hs" />
+				</p>
+				<p>Ετήσιο κόστος υποστήριξης και συντήρησης:<br/>
+					<input type="text" wicket:id="ethsioKostosSynthrhshsF" />
+				</p>
+				<p>Ετήσιο κόστος φιλοξενίας:<br/>
+					<input type="text" wicket:id="ethsioKostosFilo3eniasF" />
+				</p>
+				<p>Ετήσιο κόστος διαχείρισης:<br/>
+					<input type="text" wicket:id="ethsioKostosDiaxeirishsF" />
+				</p>
+				<p>Ετήσιο κόστος αδειών λογισμικού:<br/>
+					<input type="text" wicket:id="ethsioKostosAdeiwnF" />
+				</p>
+				<p>
+					<a wicket:id="cancel">Ακύρωση</a>
+					<a class="boxit" style="margin-left:20px;" wicket:id="save_solution">Αποθήκευση λύσης</a></p>
+			</form>
+		</li>
+	</ol>
+</div>
+
+</div>
+</div>
+
+<p class="extra_space">
+	<a id="scroll_left" href="#">&lt;&lt;&lt; Προηγούμενο βήμα</a>
+	|
+	<a id="scroll_right" href="#">Επόμενο βήμα &gt;&gt;&gt;</a>
+</p>
+
+<p class="extra_space">
+	<a wicket:id="submit" class="boxit">Υπολογισμός συγκρίσεων και προβολή της ανάλυσης</a>
+</p>
+
+</form>
+
+<p class="extra_space"><wicket:link><a href="HomePage.html">Ακύρωση και επιστροφή στην αρχική σελίδα</a></wicket:link></p>
+</wicket:extend>

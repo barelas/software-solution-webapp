@@ -1,0 +1,240 @@
+/*
+Copyright (c) 2012 George Barelas.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the GNU Public License v3.0
+which accompanies this distribution, and is available at
+http://www.gnu.org/licenses/gpl.html
+*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: arial,sans-serif;
+}
+
+ol,ul {
+	list-style-position: inside;
+}
+
+a:active, a:focus {
+	outline:none;
+}
+
+html {
+	background-color: #ccecff;
+}
+
+body {
+	font-size: 14px;
+	margin: 5px auto 5px auto;
+	width: 800px;
+	text-align: center;
+	color: #55626a;
+	background-color: white;
+	position: relative;
+}
+
+p {
+	margin-bottom: 8px;
+}
+
+a, .important {
+	text-decoration: none;
+	color: #637AAE;
+	font-weight: bold;
+}
+
+a:HOVER {
+	color: #85a4eb;
+}
+
+input {
+	border: 1px solid gray;
+	padding: 3px;
+}
+
+input:FOCUS {
+	border-color: black;
+	color: black;
+}
+
+textarea {
+	border: 1px solid gray;
+	width: 90%;
+	height: 100px;
+	padding: 3px;
+}
+
+textarea:FOCUS {
+	border-color: black;
+	color: black;
+}
+
+select {
+	border: 1px solid gray;
+	padding: 3px;
+}
+
+select:FOCUS {
+	border-color: black;
+	color: black;
+}
+
+table {
+	border-collapse: collapse;
+	background-color: white;
+}
+
+td,th {
+	border: 1px solid #55626a;
+	padding: 2px;
+}
+
+tr:HOVER {
+	background-color: #ccecff;
+}
+
+ol {
+	text-align: left;
+}
+
+li {
+	margin-bottom: 3px;
+}
+
+li:HOVER {
+	background-color: #ccecff;
+}
+
+#header {
+	font-size: 18px;
+	padding: 15px;
+	
+}
+
+#main {
+	padding: 5px;
+	min-height: 500px;
+}
+
+#footer {
+	border-top: 1px solid #55626a;
+	padding: 1px;
+}
+
+.boxit {
+	border: 1px solid #55626a;
+	padding: 3px;
+}
+
+.extra_space {
+	margin-top: 40px;
+}
+
+.feedbackPanel {
+	color: red;
+}
+
+form.analysis {
+	
+}
+
+form.analysis input[type=text] {
+	width: 90%;
+}
+
+form.analysis > div {
+	width: 540px;
+	overflow: hidden;
+	margin: 10px auto 10px auto;
+}
+
+form.analysis > div > div {
+	width: 1620px;
+}
+
+form.analysis > div > div > div {
+	height: 400px;
+	width: 510px;
+	padding: 10px;
+	float: left;
+}
+
+form.analysis > div > div > div p {
+	text-align: left;
+}
+
+#step1 {
+	border: 5px solid blue;
+}
+
+h4 {
+	margin-bottom: 10px;
+}
+
+#step1 h4 {
+	color: blue;
+}
+
+#step2 {
+	border: 5px solid purple;
+}
+
+#step2 h4 {
+	color: purple;
+}
+
+#step3 {
+	border: 5px solid green;
+}
+
+#step3 h4 {
+	color: green;
+}
+
+div.solution_form {
+	display: none;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 600px;
+	padding: 10px;
+	border: 5px solid purple;
+	background-color: white;
+}
+
+#view_analysis_info p {
+	text-align: left;
+}
+
+#view_analysis_info span {
+	font-weight: bold;
+}
+
+.no_wrap {
+	 white-space: nowrap;
+}
+
+div.view_solution {
+	display: none;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 600px;
+	padding: 10px;
+	border: 5px solid #55626a;
+	background-color: white;
+}
+
+.mark_choice {
+	font-weight: bold;
+	color: green;
+}
+
+#warnings {
+	margin-top: 20px;
+}
+
+#warnings li, #warnings h4 {
+	text-align: left;
+}

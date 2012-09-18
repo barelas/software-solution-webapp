@@ -1,0 +1,29 @@
+<!--
+Copyright (c) 2012 George Barelas.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the GNU Public License v3.0
+which accompanies this distribution, and is available at
+http://www.gnu.org/licenses/gpl.html
+-->
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+<p>
+	Η παρούσα εφαρμογή αναπτύχθηκε στα πλαίσια της Διπλωματικής Εργασίας 
+	"Τεχνικές και μεθοδολογίες σχεδιασμού και διαχείρισης έργων πληροφορικής" 
+	που εκπονήθηκε για το ΜΠΣ
+	"Διαχείριση Τεχνικών Έργων" του ΕΑΠ.
+</p>
+<p>
+	Επιβλέπων Καθηγητής:
+	<a target="_blank" href="http://www.civil.upatras.gr/el/Proswpiko/MelhDEP/entry/ChassiakosAthanasios/?PageNo=3">Δρ. Αθανάσιος Χασιακός</a>.
+</p>
+<p class="extra_space">
+<a class="boxit" wicket:id="new_analysis">Δημιουργία νέας ανάλυσης</a>
+</p>
+<div class="extra_space">
+<p>Ανάκτηση αποθηκευμένης ανάλυσης:</p>
+<form wicket:id="form">
+Αναγνωριστικό: <input size="9" type="text" wicket:id="code"/>
+<a wicket:id="submit" class="boxit">Ανάκτηση</a>
+</form>
+</div>
+</wicket:extend>

@@ -1,0 +1,103 @@
+<!--
+Copyright (c) 2012 George Barelas.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the GNU Public License v3.0
+which accompanies this distribution, and is available at
+http://www.gnu.org/licenses/gpl.html
+-->
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+<div id="view_analysis_info">
+<p>Τίτλος project: <span wicket:id="title"></span></p>
+<p>Περιγραφή: <span wicket:id="description"></span></p>
+<p>Λέξεις-κλειδιά: <span wicket:id="keywords"></span></p>
+<p>Εκτιμώμενα έτη χρήσης: <span wicket:id="usageEstimation"></span></p>
+<p>Υπάρχει τμήμα ΙΤ στον οργανισμό: <span wicket:id="it_dept"></span></p>
+<p>Υπάρχουν έμπειροι χρήστες (key-users): <span wicket:id="key_users"></span></p>
+<p>Πρόκειται για ευαίσθητα δεδομένα: <span wicket:id="sens_data"></span></p>
+
+<p>Ακολουθούν οι μετρικές σύγκρισης για κάθε υποψήφια λύση. Για κάθε μετρική, έχει σημειωθεί η καλύτερη επιλογή.</p>
+<table>
+<tr>
+	<th>Υποψήφια Λύση</th>
+	<th>Συνολικό κόστος</th>
+	<th>Αρχικό κόστος</th>
+	<th>Ετήσιο κόστος λειτουργίας</th>
+	<th>Ετήσιο κόστος λειτουργίας με επιμερισμένο το αρχικό κόστος</th>
+	<th>Χρόνος Ανάπτυξης</th>
+	<th>Συντελεστής ανεξαρτησίας</th>
+	<th>Δείκτης κέρδους ανεξαρτησίας</th>
+</tr>
+<tr wicket:id="lyseis">
+	<td>
+		<a href="#" onclick="$('div.view_solution',$(this).parent()).fadeIn();return false;">
+			<span wicket:id="title"></span>
+		</a>
+		<div class="view_solution" wicket:id="viewSolutionContainer">
+			<p>Υποψήφια λύση: <span wicket:id="title"></span></p>
+			<p>Βασικές Τεχνολογίες:
+				<span wicket:id="techDesc"></span>
+			</p>
+			
+			<p>Ανάπτυξη και εγκατάσταση από:
+				<span wicket:id="anapty3hBy"></span>
+			</p>
+			<p>Συντήρηση από:
+				<span wicket:id="synthrhshBy"></span>
+			</p>
+			
+			<p>Φιλοξενία σε:
+				<span wicket:id="filo3eniaBy"></span>
+			</p>
+			<p>Διαχείριση εξυπηρετητών από:
+				<span wicket:id="diaxeirishBy"></span>
+			</p>
+			
+			<p>Κόστος ανάπτυξης:
+				<span wicket:id="kostosAnapty3hsF"></span>
+			</p>
+			<p>Χρόνος ανάπτυξης (σε ημέρες):
+				<span wicket:id="xronosAnapty3hs"></span>
+			</p>
+			<p>Ετήσιο κόστος υποστήριξης και συντήρησης:
+				<span wicket:id="ethsioKostosSynthrhshsF"></span>
+			</p>
+			<p>Ετήσιο κόστος φιλοξενίας:
+				<span wicket:id="ethsioKostosFilo3eniasF"></span>
+			</p>
+			<p>Ετήσιο κόστος διαχείρισης:
+				<span wicket:id="ethsioKostosDiaxeirishsF"></span>
+			</p>
+			<p>Ετήσιο κόστος αδειών λογισμικού:
+				<span wicket:id="ethsioKostosAdeiwnF"></span>
+			</p>
+			
+			<p><a href="#" class="boxit" onclick="$(this).parent().parent().fadeOut();return false;">Κλείσιμο</a></p>
+		</div>
+	</td>
+	<td class="no_wrap" wicket:id="totalCostF"></td>
+	<td class="no_wrap" wicket:id="kostosAnapty3hsF"></td>
+	<td class="no_wrap" wicket:id="ethsioKostosF"></td>
+	<td class="no_wrap" wicket:id="ethsioKostosMeKatToArxikoKostosF"></td>
+	<td wicket:id="xronosAnapty3hs"></td>
+	<td wicket:id="independence"></td>
+	<td wicket:id="independenceGain"></td>
+</tr>
+</table>
+
+<div id="warnings">
+<h4>Παρατηρήσεις:</h4>
+<p wicket:id="no_warnings">Δεν υπάρχουν παρατηρήσεις.</p>
+<ul>
+	<li wicket:id="warningList">
+		<span wicket:id="warning"></span>
+	</li>
+</ul>
+</div>
+</div>
+<p class="extra_space">
+	<wicket:link><a href="AnalysisPage.html">Επεξεργασία των στοιχείων</a></wicket:link>
+	|
+	<wicket:link><a href="SaveAnalysis.html">Αποθήκευση της ανάλυσης</a></wicket:link>
+</p>
+<p class="extra_space"><wicket:link><a href="HomePage.html">Επιστροφή στην αρχική σελίδα</a></wicket:link></p>
+</wicket:extend>
